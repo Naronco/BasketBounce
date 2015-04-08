@@ -1,0 +1,43 @@
+{
+    "Balls": [
+        {
+            "id": 0,
+            "iconName": "Basketball",
+            "type": "Ball",
+            "information": {
+                "textureName": "Basketball",
+                "restitution": 0.8,
+                "pushPower": 1.0
+            }
+        },
+        {
+            "id": 1,
+            "iconName": "Tennisball",
+            "type": "Ball",
+            "information": {
+                "textureName": "Tennisball",
+                "restitution": 0.9,
+                "pushPower": 1.5
+            }
+        },
+        {
+            "id": 2,
+            "iconName": "Baseball",
+            "type": "Ball",
+            "information": {
+                "textureName": "Baseball",
+                "restitution": 0.6,
+                "pushPower": 1.5
+            }
+        }
+    ],
+    "Items": [
+    ],
+    "Themes": [
+        {
+            "id": 128,
+            "iconName": "ThemeThumbnail",
+            "type": "Theme"
+        }
+    ]
+}
