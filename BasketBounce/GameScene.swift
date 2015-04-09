@@ -37,7 +37,7 @@ class GameScene: SKScene {
     let gameStateQueue = StateQueue(state: GameState.MainMenu, changeDuration: 0.6)
     let globalNode = SKNode()
     
-    var ballNode: BallNode? = (DefaultShopItems[Statistics.selectedIDInShopCategory("Balls")] as BallShopItem).instantiateBallNode()
+    var ballNode: BallNode? = (DefaultShopItems[Statistics.selectedIDInShopCategory("Balls")] as! BallShopItem).instantiateBallNode()
     
     let floorNode = FloorNode()
     let voidNode = VoidNode()
@@ -369,11 +369,11 @@ class GameScene: SKScene {
         levelGenerator.update()
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        let touch = touches.anyObject() as UITouch
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        let touch = touches.first as! UITouch
         let location = convertPointFromView(touch.locationInView(view))
         
-        let nodes = nodesAtPoint(location) as [SKNode]
+        let nodes = nodesAtPoint(location) as! [SKNode]
         
         for node in nodes {
             if let ballNode = node as? BallNode {
@@ -396,7 +396,7 @@ class GameScene: SKScene {
     func reloadBallNode() {
         ballNode?.removeFromParent()
         
-        ballNode = (DefaultShopItems[Statistics.selectedIDInShopCategory("Balls")] as BallShopItem).instantiateBallNode()
+        ballNode = (DefaultShopItems[Statistics.selectedIDInShopCategory("Balls")] as! BallShopItem).instantiateBallNode()
         
         ballNode!.position.y = ballNode!.size.radius
         ballNode!.delegate = self

@@ -17,7 +17,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let skView = self.view as SKView
+        let skView = self.view as! SKView
         skView.ignoresSiblingOrder = true
         
         GameSceneInstance.scaleMode = .AspectFill

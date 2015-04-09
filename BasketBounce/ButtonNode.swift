@@ -67,7 +67,7 @@ public class ButtonNode: SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    public override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         if !enabled {
             return
         }
@@ -76,11 +76,11 @@ public class ButtonNode: SKSpriteNode {
         runAction(SKAction.scaleTo(0.9, duration: 0.1))
     }
     
-    public override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
+    public override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
         // TODO
     }
     
-    public override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+    public override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         if !enabled {
             return
         }

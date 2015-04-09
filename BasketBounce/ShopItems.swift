@@ -38,24 +38,24 @@ class ShopItems {
         let jsonFileContents = String(contentsOfFile: jsonFilePath, encoding: NSUTF8StringEncoding, error: nil)!
         let jsonFileData = jsonFileContents.dataUsingEncoding(NSUTF8StringEncoding)!
         
-        let categories = NSJSONSerialization.JSONObjectWithData(jsonFileData, options: NSJSONReadingOptions.allZeros, error: nil) as [String: [[String: AnyObject]]]
+        let categories = NSJSONSerialization.JSONObjectWithData(jsonFileData, options: NSJSONReadingOptions.allZeros, error: nil) as! [String: [[String: AnyObject]]]
         
         for (category, items) in categories {
             allItems[category] = []
             
             for item in items {
-                let id = item["id"] as Int
-                let iconName = item["iconName"] as String
-                let type = item["type"] as String
+                let id = item["id"] as! Int
+                let iconName = item["iconName"] as! String
+                let type = item["type"] as! String
                 
                 let icon = SKTexture(imageNamed: iconName, filteringMode: .Nearest)
                 
                 switch type {
                 case "Ball":
-                    let information = item["information"] as [String: AnyObject]
-                    let textureName = information["textureName"] as String
-                    let restitution = information["restitution"] as CGFloat
-                    let pushPower = information["pushPower"] as CGFloat
+                    let information = item["information"] as! [String: AnyObject]
+                    let textureName = information["textureName"] as! String
+                    let restitution = information["restitution"] as! CGFloat
+                    let pushPower = information["pushPower"] as! CGFloat
                     
                     let texture = SKTexture(imageNamed: textureName, filteringMode: .Nearest)
                     

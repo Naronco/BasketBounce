@@ -116,6 +116,8 @@
 		8FADE5881AB739A300054730 /* FloorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FADE5871AB739A300054730 /* FloorNode.swift */; };
 		8FADE58A1AB739B700054730 /* InvisibleWallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FADE5891AB739B700054730 /* InvisibleWallNode.swift */; };
 		8FADE5A11AB886A900054730 /* BigFont.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FADE5A01AB886A900054730 /* BigFont.png */; };
+		8FC005CA1AD59E90000B958C /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC005C91AD59E90000B958C /* SceneKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8FC005CC1AD59E96000B958C /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC005CB1AD59E96000B958C /* SpriteKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		8FE4D7401AC4507700A6E222 /* Float+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE4D73F1AC4507700A6E222 /* Float+Random.swift */; };
 		8FF9DC8D1AD27F9E00A45D41 /* ThemeThumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF9DC8C1AD27F9E00A45D41 /* ThemeThumbnail.png */; };
 		8FF9DC8F1AD280FD00A45D41 /* ThemeShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9DC8E1AD280FD00A45D41 /* ThemeShopItem.swift */; };
@@ -302,6 +304,8 @@
 		8FADE5871AB739A300054730 /* FloorNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorNode.swift; sourceTree = "<group>"; };
 		8FADE5891AB739B700054730 /* InvisibleWallNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvisibleWallNode.swift; sourceTree = "<group>"; };
 		8FADE5A01AB886A900054730 /* BigFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BigFont.png; sourceTree = "<group>"; };
+		8FC005C91AD59E90000B958C /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		8FC005CB1AD59E96000B958C /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		8FE4D73F1AC4507700A6E222 /* Float+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+Random.swift"; sourceTree = "<group>"; };
 		8FF9DC8C1AD27F9E00A45D41 /* ThemeThumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThemeThumbnail.png; sourceTree = "<group>"; };
 		8FF9DC8E1AD280FD00A45D41 /* ThemeShopItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeShopItem.swift; sourceTree = "<group>"; };
@@ -315,6 +319,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC005CC1AD59E96000B958C /* SpriteKit.framework in Frameworks */,
+				8FC005CA1AD59E90000B958C /* SceneKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +440,8 @@
 		8FADDF841AB71B1900054730 = {
 			isa = PBXGroup;
 			children = (
+				8FC005CB1AD59E96000B958C /* SpriteKit.framework */,
+				8FC005C91AD59E90000B958C /* SceneKit.framework */,
 				8FADDF8F1AB71B1900054730 /* BasketBounce */,
 				8FADDFA91AB71B1900054730 /* BasketBounceTests */,
 				8FADDF8E1AB71B1900054730 /* Products */,
@@ -952,7 +960,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -991,7 +999,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

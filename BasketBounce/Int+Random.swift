@@ -9,9 +9,7 @@
 import Foundation
 
 protocol RandomValueGenerator {
-    typealias T
-    
-    class var random: T { get }
+    static var random: Self { get }
 }
 
 extension UInt32: RandomValueGenerator {

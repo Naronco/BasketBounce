@@ -94,7 +94,7 @@ public class LabelNode: SKNode {
                     color = newColor
                 }
                 
-                let characterNode = children[index] as LabelCharacterNode
+                let characterNode = children[index] as! LabelCharacterNode
                 
                 characterNode.character = character
                 characterNode.position = offset

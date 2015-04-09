@@ -39,12 +39,12 @@ public class SwitchNode: SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    public override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         removeAllActions()
         runAction(SKAction.colorizeWithColor(UIColor(white: 0.8, alpha: 1.0), colorBlendFactor: 1.0, duration: 0.1))
     }
     
-    public override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+    public override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         removeAllActions()
         runAction(SKAction.colorizeWithColor(UIColor.whiteColor(), colorBlendFactor: 1.0, duration: 0.1))
         

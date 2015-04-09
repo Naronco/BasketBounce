@@ -12,7 +12,7 @@ let FloorTexture = SKTexture(imageNamed: "Floor", filteringMode: .Nearest)
 let FloorSize = CGSize(width: UIScreen.mainScreen().bounds.size.width, aspectRatio: FloorTexture.size().aspectRatio)
 
 class FloorNode: SKSpriteNode {
-    override init() {
+    init() {
         super.init(texture: FloorTexture, color: UIColor.whiteColor(), size: FloorSize)
         
         position = CGPoint(x: 0, y: -FloorSize.height * 0.5)

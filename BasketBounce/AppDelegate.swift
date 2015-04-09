@@ -13,6 +13,8 @@ let DefaultColorPalette = ColorPalette(imageNamed: "ColorPalette", shadesPerColo
 
 let DefaultShopItems = ShopItems()
 
+let __IPHONEOS_VERSION = UIDevice.currentDevice().systemVersion.compare("8.0.0", options: .NumericSearch) == .OrderedAscending ? 7 : 8
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?

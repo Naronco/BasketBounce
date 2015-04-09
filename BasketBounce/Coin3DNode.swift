@@ -33,7 +33,7 @@ class Coin3DNode: SK3DNode {
         
         scnScene.rootNode.addChildNode(pointOfView)
         
-        let s1 = valueForKey("_scnRenderer") as SCNRenderer?
+        let s1 = valueForKey("_scnRenderer") as! SCNRenderer?
         println("\(s1)")
         
         let coin3DNodeMaterial = SCNMaterial()

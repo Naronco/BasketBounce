@@ -12,7 +12,7 @@ let SkyTexture = SKTexture(imageNamed: "Sky", filteringMode: .Nearest)
 let SkySize = CGSize(width: UIScreen.mainScreen().bounds.size.width, aspectRatio: SkyTexture.size().aspectRatio)
 
 class SkyNode: SKSpriteNode {
-    override init() {
+    init() {
         super.init(texture: SkyTexture, color: UIColor.whiteColor(), size: SkySize)
     }
 

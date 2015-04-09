@@ -41,12 +41,12 @@ class ShopItemNode: SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         removeActionForKey("ScaleAction")
         runAction(SKAction.scaleTo(0.9, duration: 0.1), withKey: "ScaleAction")
     }
     
-    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         removeActionForKey("ScaleAction")
         runAction(SKAction.scaleTo(1.0, duration: 0.1), withKey: "ScaleAction")
         

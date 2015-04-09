@@ -27,7 +27,7 @@ class Image3D {
     
     let width, height: Int
     let data: NSData
-    let dataBytes: UnsafePointer<Byte>
+    let dataBytes: UnsafePointer<UInt8>
     private(set) var generated: [Bool]
     
     typealias FinishedLoadingAction = () -> Void
@@ -50,7 +50,7 @@ class Image3D {
         self.width = width
         self.height = height
         self.data = data
-        self.dataBytes = UnsafePointer<Byte>(data.bytes)
+        self.dataBytes = UnsafePointer<UInt8>(data.bytes)
         self.generated = [Bool](count: (width * height) << 1, repeatedValue: false)
     }
     
@@ -275,7 +275,7 @@ class Image3D {
         return (vertices, indices)
     }
     
-    func pixelAtX(x: Int, y: Int) -> (r: Byte, g: Byte, b: Byte, a: Byte) {
+    func pixelAtX(x: Int, y: Int) -> (r: UInt8, g: UInt8, b: UInt8, a: UInt8) {
         if x < 0 || y < 0 || x >= width || y >= height { return (0, 0, 0, 0) }
         let index = (x + (height - 1 - y) * width) << 2
         return (dataBytes[index + 0], dataBytes[index + 1], dataBytes[index + 2], dataBytes[index + 3])
